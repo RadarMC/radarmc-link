@@ -1,0 +1,19 @@
+name: RadarLink
+version: "${version}"
+main: org.radarmc.link.bukkit.RadarLinkBukkit
+api-version: "1.13"
+folia-supported: true
+softdepend: [floodgate]
+description: "Links your server to RadarMC: confirms that players who copied the IP joined, and gives vote streak rewards."
+website: https://radarmc.org
+authors: [RadarMC]
+commands:
+  radarlink:
+    description: RadarLink status and config reload
+    usage: /radarlink [status|reload]
+    aliases: [rlink]
+    permission: radarlink.admin
+permissions:
+  radarlink.admin:
+    description: Use /radarlink
+    default: op

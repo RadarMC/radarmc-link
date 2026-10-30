@@ -1,0 +1,64 @@
+# RadarLink: связь вашего сервера с RadarMC / links your server to RadarMC, https://radarmc.org
+# Вопросы и ответы / FAQ: https://radarmc.org/faq
+#
+# После правки сохраните файл и выполните /radarlink reload (на прокси /radarlinkproxy reload) или перезапустите сервер.
+# After editing, run /radarlink reload (/radarlinkproxy reload on a proxy) or restart.
+
+# Адрес API RadarMC. Менять не нужно.
+# RadarMC API address. Leave as is.
+api-url: "https://api.radarmc.org"
+
+# Ключ API сервера: кабинет сервера на radarmc.org, вкладка «API-ключи».
+# Server API key: your server dashboard on radarmc.org, «API keys» tab.
+api-key: "rmc_0123456789abcdefghijABCDEFGHIJkl"
+
+# Адрес страницы сервера: radarmc.org/servers/<slug>
+# Your server page address: radarmc.org/servers/<slug>
+server-slug: "my-server"
+
+# Сообщать RadarMC о входах игроков (ник, UUID, IP). IP сразу превращается в обезличенный код и не хранится.
+# Так в аналитике появляется шаг «Вошли в игру».
+# Report player joins (nick, UUID, IP) for the «joined the game» funnel step. The IP is hashed at once and never stored.
+send-joins: false
+
+# Включите на серверах Paper/Spigot за прокси (Velocity, BungeeCord), если на прокси тоже стоит RadarLink.
+# Тогда входы сообщает прокси, а этот сервер только выдаёт награды, которые пересылает прокси.
+# Turn on for Paper/Spigot servers behind a proxy that also runs RadarLink.
+behind-proxy: false
+
+# Как часто проверять новые голоса, в секундах (30-3600).
+# How often to check for new votes, in seconds (30-3600).
+vote-poll-interval: 60
+
+# Если игрок не в сети, сохранить награду и выдать при следующем входе.
+# Если false, голос ждёт на сайте до 30 дней и выдаётся, когда игрок будет в сети во время проверки.
+# Queue rewards for offline players and give them on their next join.
+offline-rewards: true
+
+# Только для Velocity и BungeeCord: forward - переслать награду на сервер, где сейчас игрок
+# (там должен стоять RadarLink с behind-proxy: true и тем же proxy-secret);
+# commands - выполнить команды reward-tiers в консоли прокси; off - не выдавать награды.
+# Velocity/BungeeCord only: forward | commands | off.
+proxy-rewards: forward
+
+# Общий секрет прокси и серверов за ним (не короче 16 символов, одинаковый везде). Это не ключ API.
+# Shared secret between the proxy and its servers (16+ characters, the same everywhere). Not the API key.
+proxy-secret: ""
+
+# Награды за серию голосов. Выполняется один уровень: с самым большим streak, до которого дотянулась серия.
+# %player% - ник игрока, %streak% - дней подряд. Команды выполняются от консоли этого сервера.
+# label - короткая подпись для кабинета на сайте (по желанию). Текст команд на сайт не отправляется.
+# Streak reward tiers: the tier with the highest streak the voter reached runs. Commands never leave this server.
+reward-tiers:
+  - streak: 1
+    label: "Алмаз за голос"
+    commands:
+      - "give %player% diamond 1"
+  - streak: 7
+    label: "VIP на 7 дней"
+    commands:
+      - "lp user %player% parent addtemp vip 7d"
+  - streak: 30
+    label: "Легендарный ключ"
+    commands:
+      - "crate key give %player% legendary"

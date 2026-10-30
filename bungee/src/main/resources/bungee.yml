@@ -1,0 +1,6 @@
+name: RadarLink
+version: "${version}"
+main: org.radarmc.link.bungee.RadarLinkBungee
+author: RadarMC
+description: "Links your network to RadarMC: confirms that players who copied the IP joined, and gives vote streak rewards."
+softDepends: [floodgate]

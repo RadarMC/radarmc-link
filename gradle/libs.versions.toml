@@ -1,0 +1,31 @@
+[versions]
+gson = "2.14.0"
+snakeyaml = "2.5"
+# JUnit 5 still runs on Java 8 (core:testJava8); JUnit 6 needs Java 17 and comes with MockBukkit.
+junit5 = "5.14.4"
+junit6 = "6.0.3"
+spigot-legacy = "1.8.8-R0.1-SNAPSHOT"
+paper = "1.21.11-R0.1-SNAPSHOT"
+mockbukkit = "4.116.3"
+velocity = "3.1.1"
+bungeecord = "1.21-R0.4"
+shadow = "9.6.1"
+spotless = "8.10.4"
+palantir-java-format = "2.100.0"
+
+[libraries]
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+snakeyaml = { module = "org.yaml:snakeyaml", version.ref = "snakeyaml" }
+junit5-bom = { module = "org.junit:junit-bom", version.ref = "junit5" }
+junit6-bom = { module = "org.junit:junit-bom", version.ref = "junit6" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
+junit-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+spigot-api-legacy = { module = "org.spigotmc:spigot-api", version.ref = "spigot-legacy" }
+paper-api = { module = "io.papermc.paper:paper-api", version.ref = "paper" }
+mockbukkit = { module = "org.mockbukkit.mockbukkit:mockbukkit-v1.21", version.ref = "mockbukkit" }
+velocity-api = { module = "com.velocitypowered:velocity-api", version.ref = "velocity" }
+bungeecord-api = { module = "net.md-5:bungeecord-api", version.ref = "bungeecord" }
+
+[plugins]
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }

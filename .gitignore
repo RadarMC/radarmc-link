@@ -1,0 +1,10 @@
+.gradle/
+build/
+out/
+.idea/
+*.iml
+.vscode/
+run/
+*.log
+scripts/matrix/.work/
+__pycache__/
