@@ -107,6 +107,22 @@ streak-rewards:
 
 If another plugin already gives out RadarMC votes, leave both `vote-reward` and `streak-rewards` unset: RadarLink then leaves votes alone and only reports joins.
 
+### With VotingPlugin
+
+RadarMC also sends votes over Votifier (NuVotifier v2 or Votifier v1, set on the «Votifier» tab of your dashboard). To reward them with VotingPlugin, add the site to `VoteSites.yml`:
+
+```yaml
+VoteSites:
+  RadarMC:
+    Enabled: true
+    Name: 'RadarMC'
+    ServiceSite: 'RadarMC'
+    VoteURL: 'https://radarmc.org/servers/your-server'
+    VoteDelay: 24
+```
+
+`ServiceSite` must be `RadarMC`: that is the service name of every vote. Use either VotingPlugin or RadarLink rewards for RadarMC votes, not both, or a vote is rewarded twice.
+
 ## Proxy networks (Velocity, BungeeCord)
 
 1. Install RadarLink on the proxy and on every server behind it. Use the same `api-key` and `server-slug` everywhere.
@@ -313,6 +329,22 @@ streak-rewards:
 - Игроки Bedrock указывают на сайте ник так же, как в игре, с префиксом Floodgate (обычно точка: `.Steve`).
 
 Если голоса RadarMC уже выдаёт другой плагин, не задавайте ни `vote-reward`, ни `streak-rewards`: тогда RadarLink не трогает голоса и только сообщает о входах.
+
+### Вместе с VotingPlugin
+
+RadarMC отправляет голоса и по Votifier (NuVotifier v2 или Votifier v1, настраивается на вкладке «Votifier» в кабинете). Чтобы выдавать за них награды через VotingPlugin, добавьте сайт в `VoteSites.yml`:
+
+```yaml
+VoteSites:
+  RadarMC:
+    Enabled: true
+    Name: 'RadarMC'
+    ServiceSite: 'RadarMC'
+    VoteURL: 'https://radarmc.org/servers/your-server'
+    VoteDelay: 24
+```
+
+`ServiceSite` должен быть `RadarMC`: с этим именем сервиса приходит каждый голос. Награды за голоса RadarMC выдавайте либо через VotingPlugin, либо через RadarLink, но не через оба сразу, иначе голос будет награждён дважды.
 
 ## Сеть с прокси (Velocity, BungeeCord)
 
