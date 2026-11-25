@@ -44,6 +44,8 @@ To reach `api.radarmc.org` over HTTPS, a server on Java 8 needs update 8u141 or 
 
 The files are on the «RadarLink» tab of your server dashboard, on `https://cdn.radarmc.org/radarlink/` and on the [releases page](https://github.com/RadarMC/radarmc-link/releases). Checksums are in `SHA256SUMS`.
 
+RadarLink is also listed on [Modrinth](https://modrinth.com/plugin/radarlink), [CurseForge](https://www.curseforge.com/minecraft/bukkit-plugins/radarlink), [Hangar](https://hangar.papermc.io/RadarMC/RadarLink) and [SpigotMC](https://www.spigotmc.org/resources/radarlink.140494).
+
 ## Installation
 
 1. Put the jar into the `plugins` folder and start the server. `plugins/RadarLink/config.yml` appears.
@@ -266,6 +268,8 @@ RadarLink связывает ваш Minecraft-сервер с [RadarMC](https://
 | Не уверены | `RadarLink-<версия>.jar` подходит для всех платформ |
 
 Файлы лежат в кабинете сервера на вкладке «RadarLink», на `https://cdn.radarmc.org/radarlink/` и на [странице релизов](https://github.com/RadarMC/radarmc-link/releases). Контрольные суммы в `SHA256SUMS`.
+
+RadarLink также есть на [Modrinth](https://modrinth.com/plugin/radarlink), [CurseForge](https://www.curseforge.com/minecraft/bukkit-plugins/radarlink), [Hangar](https://hangar.papermc.io/RadarMC/RadarLink) и [SpigotMC](https://www.spigotmc.org/resources/radarlink.140494).
 
 ## Установка
 
