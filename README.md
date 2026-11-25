@@ -6,7 +6,7 @@ RadarLink connects your Minecraft server to [RadarMC](https://radarmc.org):
 
 - **Joins after a copied IP.** Your RadarMC analytics show how many players who copied your IP on the site actually joined.
 - **Vote rewards and streak bonuses.** A reward for every vote on RadarMC, plus bonuses when a player's streak of daily votes reaches a set length. Players who are offline get the reward on their next join.
-- **Status in the dashboard.** The «Plugin» tab shows that RadarLink is connected, its version and platform.
+- **Status in the dashboard.** The «RadarLink» tab shows that RadarLink is connected, its version and platform.
 
 Works on Spigot, Paper, Folia and Bukkit hybrids from Minecraft 1.7.10 to the newest version, on Velocity and on BungeeCord. Bedrock players are recognised through Floodgate when it is installed.
 
@@ -42,14 +42,14 @@ To reach `api.radarmc.org` over HTTPS, a server on Java 8 needs update 8u141 or 
 | BungeeCord, Waterfall | `RadarLink-Bungee-<version>.jar` |
 | Not sure | `RadarLink-<version>.jar` works on every platform |
 
-The files are on the «Plugin» tab of your server dashboard, on `https://cdn.radarmc.org/radarlink/` and on the [releases page](https://github.com/RadarMC/radarmc-link/releases). Checksums are in `SHA256SUMS`.
+The files are on the «RadarLink» tab of your server dashboard, on `https://cdn.radarmc.org/radarlink/` and on the [releases page](https://github.com/RadarMC/radarmc-link/releases). Checksums are in `SHA256SUMS`.
 
 ## Installation
 
 1. Put the jar into the `plugins` folder and start the server. `plugins/RadarLink/config.yml` appears.
 2. In your server dashboard on radarmc.org open the «API keys» tab and create a key.
 3. Put the key (`api-key`) and your server page address (`server-slug`: the last part of `radarmc.org/servers/<slug>`) into `config.yml`.
-4. Run `/radarlink reload` (`/radarlinkproxy reload` on a proxy) or restart the server. Within a minute the «Plugin» tab shows «Connected».
+4. Run `/radarlink reload` (`/radarlinkproxy reload` on a proxy) or restart the server. Within a minute the «RadarLink» tab shows «Connected».
 
 ## Updating
 
@@ -229,7 +229,7 @@ RadarLink связывает ваш Minecraft-сервер с [RadarMC](https://
 
 - **«Вошли в игру».** Показывает в аналитике, сколько игроков, скопировавших IP на RadarMC, действительно зашли на сервер.
 - **Награды за голоса и бонусы за серию.** Выдаёт награду за каждый голос на RadarMC и бонусы, когда серия дней подряд доходит до заданной длины. Игрокам не в сети награда сохраняется до следующего входа.
-- **Статус в кабинете.** На вкладке «Плагин» видно, что RadarLink подключён, его версию и платформу.
+- **Статус в кабинете.** На вкладке «RadarLink» видно, что RadarLink подключён, его версию и платформу.
 
 Работает на Spigot, Paper, Folia и гибридах Bukkit с Minecraft 1.7.10 до самой новой версии, на Velocity и BungeeCord. Игроков Bedrock видит через Floodgate, если он установлен.
 
@@ -265,14 +265,14 @@ RadarLink связывает ваш Minecraft-сервер с [RadarMC](https://
 | BungeeCord, Waterfall | `RadarLink-Bungee-<версия>.jar` |
 | Не уверены | `RadarLink-<версия>.jar` подходит для всех платформ |
 
-Файлы лежат в кабинете сервера на вкладке «Плагин», на `https://cdn.radarmc.org/radarlink/` и на [странице релизов](https://github.com/RadarMC/radarmc-link/releases). Контрольные суммы в `SHA256SUMS`.
+Файлы лежат в кабинете сервера на вкладке «RadarLink», на `https://cdn.radarmc.org/radarlink/` и на [странице релизов](https://github.com/RadarMC/radarmc-link/releases). Контрольные суммы в `SHA256SUMS`.
 
 ## Установка
 
 1. Положите jar-файл в папку `plugins` и запустите сервер. Появится файл `plugins/RadarLink/config.yml`.
 2. В кабинете сервера на radarmc.org откройте вкладку «API-ключи» и создайте ключ.
 3. Впишите в `config.yml` ключ (`api-key`) и адрес страницы сервера (`server-slug`: последняя часть ссылки `radarmc.org/servers/<slug>`).
-4. Выполните `/radarlink reload` (на прокси `/radarlinkproxy reload`) или перезапустите сервер. Через минуту статус на вкладке «Плагин» сменится на «Подключён».
+4. Выполните `/radarlink reload` (на прокси `/radarlinkproxy reload`) или перезапустите сервер. Через минуту статус на вкладке «RadarLink» сменится на «Подключён».
 
 ## Обновление
 
